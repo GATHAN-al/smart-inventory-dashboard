@@ -1,8 +1,9 @@
-import { Routes, Route, Navigate, useLocation, Link } from 'react-router-dom'; // Tambahkan Link di sini
+import { Routes, Route, Navigate, useLocation, Link } from 'react-router-dom';
 import LoginPage from './LoginPage';
 import Dashboard from './Dashboard';
 import ProductList from './ProductList';
 import ProductCreate from './ProductCreate';
+import ProductEdit from './ProductEdit'; // Pastikan ini sudah di-import
 
 // Komponen Layout Sederhana untuk Navigasi (Sidebar/Navbar)
 const Layout = ({ children }) => {
@@ -20,7 +21,6 @@ const Layout = ({ children }) => {
           <h2 className="text-xl font-bold text-indigo-600">Smart Inventory</h2>
         </div>
         <nav className="mt-6">
-          {/* Ganti <a> menjadi <Link> agar tidak reload halaman */}
           <Link 
             to="/dashboard" 
             className={`block py-2.5 px-4 ${location.pathname === '/dashboard' ? 'bg-indigo-50 text-indigo-600' : 'text-gray-600 hover:bg-gray-50'}`}
@@ -75,7 +75,6 @@ function App() {
         } 
       />
 
-      {/* --- INI YANG TADI HILANG (DAFTAR PRODUK) --- */}
       <Route 
         path="/products" 
         element={
@@ -85,7 +84,6 @@ function App() {
         } 
       />
 
-      {/* Route Create Product */}
       <Route 
         path="/products/create" 
         element={
@@ -94,6 +92,17 @@ function App() {
           </ProtectedRoute>
         } 
       />
+
+      {/* --- TAMBAHAN ROUTE EDIT DI SINI --- */}
+      <Route 
+        path="/products/edit/:id" 
+        element={
+          <ProtectedRoute>
+            <ProductEdit />
+          </ProtectedRoute>
+        } 
+      />
+
     </Routes>
   );
 }
