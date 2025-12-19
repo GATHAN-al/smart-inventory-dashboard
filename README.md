@@ -29,4 +29,4 @@ Project ini terdiri dari dua bagian utama:
 *(Nanti kamu bisa upload screenshot aplikasi di sini biar makin keren)*
 
 ---
-Developed by **[Nama Kamu]**
+Developed by **Muhammad Gathan Al Ghifari**
