@@ -26,7 +26,6 @@ Project ini terdiri dari dua bagian utama:
 - `/inventory-frontend` : Frontend Code (React)
 
 ## 📸 Screenshots
-*(Nanti kamu bisa upload screenshot aplikasi di sini biar makin keren)*
 
 ---
 Developed by **Muhammad Gathan Al Ghifari**
