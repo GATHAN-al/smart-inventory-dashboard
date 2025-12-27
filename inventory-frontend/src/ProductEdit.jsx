@@ -45,7 +45,7 @@ const ProductEdit = () => {
         const token = localStorage.getItem('token');
         
         try {
-            await axios.put(`http://localhost:8000/api/products/${id}`, {
+            await axios.put(`http://localhost:8001/api/products/${id}`, {
                 name,
                 category,
                 price,

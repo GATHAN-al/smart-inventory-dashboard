@@ -13,7 +13,7 @@ const ProductList = () => {
     // Ambil data produk dari API
     const fetchProducts = useCallback(async () => {
         try {
-            const res = await axios.get('http://localhost:8000/api/products', getConfig());
+            const res = await axios.get('http://localhost:8001/api/products', getConfig());
             setProducts(res.data.data ? res.data.data : res.data); // Handle jika response dibungkus "data"
         } catch (err) {
             console.error("Gagal mengambil data:", err);

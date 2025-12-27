@@ -15,7 +15,7 @@ const ProductCreate = () => {
         const token = localStorage.getItem('token');
         
         try {
-            await axios.post('http://localhost:8000/api/products', {
+            await axios.post('http://localhost:8001/api/products', {
                 name,
                 category,
                 price,

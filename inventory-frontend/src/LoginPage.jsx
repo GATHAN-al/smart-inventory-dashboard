@@ -10,7 +10,7 @@ const LoginPage = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/api/login', { email, password });
+            const response = await axios.post('http://localhost:8001/api/login', { email, password });
             localStorage.setItem('token', response.data.token);
             navigate('/dashboard');
         // eslint-disable-next-line no-unused-vars
